@@ -1,0 +1,17 @@
+uuid: a45677ea-67et-5ght-7hty-909876htj67
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - user
+id: system_connect_rest_resource
+plugin_id: system_connect_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
