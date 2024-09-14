@@ -76,6 +76,7 @@ class CustomRestResource extends ResourceBase {
   }
 
 }
+```
 
 ## Step 3: Create the Module Info File
 
@@ -91,7 +92,7 @@ core_version_requirement: ^9 || ^10
 package: Custom
 dependencies:
   - rest
-
+```
 This .info.yml file provides essential metadata about the module, including its name, type, description, and dependencies. The core_version_requirement ensures the module is compatible with Drupal 9 and 10, and the module depends on Drupal's REST API module (rest).
 
 ## Step 4: Enable the Module
