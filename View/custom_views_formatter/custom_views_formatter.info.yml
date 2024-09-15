@@ -1,0 +1,5 @@
+name: 'Custom Views Formatter'
+type: module
+description: 'Provides a custom field formatter to check if a field is empty.'
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom
