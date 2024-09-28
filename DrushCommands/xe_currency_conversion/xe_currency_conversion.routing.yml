@@ -1,0 +1,15 @@
+xe_currency_conversion.config_form:
+  path: '/admin/config/xe_currency_conversion/settings'
+  defaults:
+    _form: '\Drupal\xe_currency_conversion\Form\XeCurrencyConversionSettingsForm'
+    _title: 'XE Currency Conversion Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+xe_currency_conversion.import_form:
+  path: '/admin/config/xe_currency_conversion/import'
+  defaults:
+    _form: '\Drupal\xe_currency_conversion\Form\XeCurrencyConversionImportForm'
+    _title: 'XE Currency Conversion Import'
+  requirements:
+    _permission: 'administer site configuration'

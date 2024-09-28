@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * Install and update functions for the xe_currency_conversion module.
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * Define the database schema for currency conversion data.
+ */
+function xe_currency_conversion_schema() {
+  $schema = [
+    'xe_currency_conversion' => [
+      'description' => 'The base table for currency conversion items.',
+      'fields' => [
+        'crid' => [
+          'description' => 'The primary identifier for a currency conversion item.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ],
+        'symbol' => [
+          'description' => 'The currency\'s symbol.',
+          'type' => 'varchar',
+          'length' => 3,
+          'not null' => TRUE,
+          'default' => '',
+        ],
+        'name' => [
+          'description' => 'The name of the currency.',
+          'type' => 'varchar',
+          'length' => 256,
+          'not null' => TRUE,
+          'default' => '',
+        ],
+        'rate' => [
+          'description' => 'Provides the rate for the current currency.',
+          'type' => 'numeric',
+          'precision' => 60,
+          'scale' => 10,
+          'not null' => TRUE,
+          'default' => 0,
+        ],
+        'inverse' => [
+          'description' => 'Provides the inverse rate for the current currency.',
+          'type' => 'numeric',
+          'precision' => 30,
+          'scale' => 10,
+          'not null' => TRUE,
+          'default' => 0,
+        ],
+      ],
+      'primary key' => ['crid'],
+    ],
+  ];
+
+  return $schema;
+}
