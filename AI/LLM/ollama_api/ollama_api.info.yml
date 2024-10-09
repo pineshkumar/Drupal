@@ -1,0 +1,5 @@
+name: 'Ollama API'
+type: module
+description: 'A module to interact with the Ollama API.'
+core_version_requirement: ^10 || ^11
+package: Custom

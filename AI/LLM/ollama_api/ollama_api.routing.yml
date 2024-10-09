@@ -1,0 +1,14 @@
+ollama_api.generate:
+  path: '/ollama/generate'
+  defaults:
+    _controller: '\Drupal\ollama_api\Controller\OllamaController::generateResponse'
+    _title: 'Generate Ollama Response'
+  requirements:
+    _permission: 'access content'
+ollama_chat.form:
+  path: '/ollama-chat'
+  defaults:
+    _form: '\Drupal\ollama_api\Form\OllamaChatForm'
+    _title: 'Ollama Chat Interface'
+  requirements:
+    _permission: 'access content'
